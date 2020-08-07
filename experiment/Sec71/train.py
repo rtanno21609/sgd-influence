@@ -1,9 +1,11 @@
 import os, sys
 import argparse
 import copy
+import joblib
 import numpy as np
 from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
-from sklearn.externals import joblib
+
+# from sklearn.externals import joblib
 import torch
 import torch.nn as nn
 from DataModule import MnistModule, NewsModule, AdultModule

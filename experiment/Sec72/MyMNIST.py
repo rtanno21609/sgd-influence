@@ -4,6 +4,7 @@ import os
 import os.path
 import gzip
 import numpy as np
+import os
 import sys
 import random
 import codecs
@@ -15,7 +16,7 @@ else:
 
 import torch
 import torch.utils.data as data
-from torchvision.datasets.utils import download_url, check_integrity, makedir_exist_ok
+from torchvision.datasets.utils import download_url, check_integrity
 
 torch.backends.cudnn.deterministic=True
 torch.backends.cudnn.benchmark = False
@@ -193,8 +194,8 @@ class MNIST(VisionDataset):
         if self._check_exists():
             return
 
-        makedir_exist_ok(self.raw_folder)
-        makedir_exist_ok(self.processed_folder)
+        os.makedirs(self.raw_folder, exist_ok=True)
+        os.makedirs(self.processed_folder, exist_ok=True)
 
         # download files
         for url in self.urls:
