@@ -65,8 +65,9 @@ For "Retrain Last", set `start_epoch` to 19, and for "Retarin All" set `start_ep
 To retrain the models for the proposed method with "Retrain Last", run
 
 ```
-python eval.py mnist 19 0 5 2
+python eval.py mnist 19 20 0 5 2
 ```
+This step assumes that both `ae` and `iso` have been trained. 
 
 ### Step5. See Results
 
