@@ -2,7 +2,6 @@ import os, sys
 import argparse
 import numpy as np
 import joblib
-# from sklearn.externals import joblib
 import torch
 from DataModule import MnistModule, NewsModule, AdultModule
 from MyNet import LogReg, DNN, NetList
